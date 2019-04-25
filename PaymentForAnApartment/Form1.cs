@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,20 +26,24 @@ namespace PaymentForAnApartment
         double HotWaterRate = 128.74;
         double DrainageRate = 17.1;
 
+        private ReceiptModel data;
 
         public Form1()
         {
             InitializeComponent();
 
-            HotWaterInvoiceSum = 413.27;
-            ColdWaterInvoiceSum = 283.84;
-            TotalInvoiceSum = 3719.53;
 
-            hotWaterInvoiceSum.Text = HotWaterInvoiceSum + " р.";
-            coldWaterInvoiceSum.Text = ColdWaterInvoiceSum + " р.";
-            totalInvoiceSum.Text = TotalInvoiceSum + " р.";
-                      
-                                    
+            using (StreamReader reader = new StreamReader(@"Data.json"))
+            {
+                var json = reader.ReadToEnd();
+                data = JsonConvert.DeserializeObject<ReceiptModel>(json);
+            }
+
+            hotWaterInvoiceSum.Text = data.HotWaterInvoiceSum + " р.";
+            coldWaterInvoiceSum.Text = data.ColdWaterInvoiceSum + " р.";
+            totalInvoiceSum.Text = data.TotalInvoiceSum + " р.";
+            lastColdWaterIndicator.Text = data.LastColdWaterIndicator.ToString();
+            lastHotWaterIndicator.Text = data.LastHotWaterIndicator.ToString();
         }
 
         public void Calculate()
@@ -64,13 +70,6 @@ namespace PaymentForAnApartment
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
-            //var InvoiceHotWater = hotWaterInvoiceSum.Text.Replace(" p.", "");
-            //var InvoiceColdWater = coldWaterInvoiceSum.Text.Replace(" p.", "");
-            //var InvoiceTotalWater = totalInvoiceSum.Text.Replace(" p.", "");
-            //HotWaterInvoiceSum = int.Parse(InvoiceHotWater);
-            //ColdWaterInvoiceSum = int.Parse(InvoiceColdWater);
-            //TotalInvoiceSum = int.Parse(InvoiceTotalWater);
-
             var LastColdWaterIndicator = int.Parse(lastColdWaterIndicator.Text);
             var ColdWaterIndicator = int.Parse(coldWaterIndicator.Text);
             var HotWaterIndicator = int.Parse(hotWaterIndicator.Text);
