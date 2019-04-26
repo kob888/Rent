@@ -31,8 +31,7 @@ namespace PaymentForAnApartment
         public Form1()
         {
             InitializeComponent();
-
-
+            
             using (StreamReader reader = new StreamReader(@"Data.json"))
             {
                 var json = reader.ReadToEnd();
@@ -86,16 +85,22 @@ namespace PaymentForAnApartment
         {
             if (changeValueCheckBox.Checked)
             {
-                hotWaterInvoiceSum.Enabled = true;
-                coldWaterInvoiceSum.Enabled = true;
-                totalInvoiceSum.Enabled = true;
+                //hotWaterInvoiceSum.Enabled = true;
+                //coldWaterInvoiceSu.Enabled = true;
+               // totalInvoiceSum.Enabled = true;
             }
             else
             {
-                hotWaterInvoiceSum.Enabled = false;
-                coldWaterInvoiceSum.Enabled = false;
-                totalInvoiceSum.Enabled = false;
+                //hotWaterInvoiceSum.Enabled = false;
+                //coldWaterInvoiceSu.Enabled = false;
+                //totalInvoiceSum.Enabled = false;
             }
+        }
+
+        private void changeReceiptButton_Click(object sender, EventArgs e)
+        {
+            ReceiptForm receiptForm = new ReceiptForm();
+            receiptForm.Show(this);
         }
     }
 }

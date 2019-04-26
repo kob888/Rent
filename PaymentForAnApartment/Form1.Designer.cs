@@ -31,11 +31,10 @@
             this.hotWaterConst = new System.Windows.Forms.Label();
             this.coldWaterLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.hotWaterInvoiceSum = new System.Windows.Forms.TextBox();
-            this.coldWaterInvoiceSum = new System.Windows.Forms.TextBox();
-            this.totalInvoiceSum = new System.Windows.Forms.TextBox();
             this.changeValueCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.coldWaterInvoiceSum = new System.Windows.Forms.Label();
+            this.hotWaterInvoiceSum = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -61,6 +60,9 @@
             this.calculateButton = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.numberOfMonth = new System.Windows.Forms.NumericUpDown();
+            this.totalInvoiceSum = new System.Windows.Forms.Label();
+            this.changeReceiptButton = new System.Windows.Forms.Button();
+            this.changeTariffButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -71,7 +73,7 @@
             // 
             this.hotWaterConst.AutoSize = true;
             this.hotWaterConst.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hotWaterConst.Location = new System.Drawing.Point(11, 51);
+            this.hotWaterConst.Location = new System.Drawing.Point(33, 39);
             this.hotWaterConst.Name = "hotWaterConst";
             this.hotWaterConst.Size = new System.Drawing.Size(99, 17);
             this.hotWaterConst.TabIndex = 1;
@@ -81,7 +83,7 @@
             // 
             this.coldWaterLabel.AutoSize = true;
             this.coldWaterLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.coldWaterLabel.Location = new System.Drawing.Point(11, 85);
+            this.coldWaterLabel.Location = new System.Drawing.Point(33, 68);
             this.coldWaterLabel.Name = "coldWaterLabel";
             this.coldWaterLabel.Size = new System.Drawing.Size(108, 17);
             this.coldWaterLabel.TabIndex = 2;
@@ -91,44 +93,17 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(306, 89);
+            this.label3.Location = new System.Drawing.Point(33, 102);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(126, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Всего к оплате:";
             // 
-            // hotWaterInvoiceSum
-            // 
-            this.hotWaterInvoiceSum.Enabled = false;
-            this.hotWaterInvoiceSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.hotWaterInvoiceSum.Location = new System.Drawing.Point(129, 47);
-            this.hotWaterInvoiceSum.Name = "hotWaterInvoiceSum";
-            this.hotWaterInvoiceSum.Size = new System.Drawing.Size(118, 24);
-            this.hotWaterInvoiceSum.TabIndex = 4;
-            // 
-            // coldWaterInvoiceSum
-            // 
-            this.coldWaterInvoiceSum.Enabled = false;
-            this.coldWaterInvoiceSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.coldWaterInvoiceSum.Location = new System.Drawing.Point(129, 85);
-            this.coldWaterInvoiceSum.Name = "coldWaterInvoiceSum";
-            this.coldWaterInvoiceSum.Size = new System.Drawing.Size(118, 24);
-            this.coldWaterInvoiceSum.TabIndex = 5;
-            // 
-            // totalInvoiceSum
-            // 
-            this.totalInvoiceSum.Enabled = false;
-            this.totalInvoiceSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.totalInvoiceSum.Location = new System.Drawing.Point(438, 85);
-            this.totalInvoiceSum.Name = "totalInvoiceSum";
-            this.totalInvoiceSum.Size = new System.Drawing.Size(141, 24);
-            this.totalInvoiceSum.TabIndex = 6;
-            // 
             // changeValueCheckBox
             // 
             this.changeValueCheckBox.AutoSize = true;
             this.changeValueCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.changeValueCheckBox.Location = new System.Drawing.Point(358, 28);
+            this.changeValueCheckBox.Location = new System.Drawing.Point(337, 28);
             this.changeValueCheckBox.Name = "changeValueCheckBox";
             this.changeValueCheckBox.Size = new System.Drawing.Size(221, 19);
             this.changeValueCheckBox.TabIndex = 7;
@@ -138,13 +113,15 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.changeTariffButton);
+            this.groupBox1.Controls.Add(this.changeReceiptButton);
+            this.groupBox1.Controls.Add(this.totalInvoiceSum);
+            this.groupBox1.Controls.Add(this.coldWaterInvoiceSum);
+            this.groupBox1.Controls.Add(this.hotWaterInvoiceSum);
             this.groupBox1.Controls.Add(this.hotWaterConst);
             this.groupBox1.Controls.Add(this.changeValueCheckBox);
-            this.groupBox1.Controls.Add(this.hotWaterInvoiceSum);
-            this.groupBox1.Controls.Add(this.totalInvoiceSum);
             this.groupBox1.Controls.Add(this.coldWaterLabel);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.coldWaterInvoiceSum);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -152,6 +129,26 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Квитанция";
+            // 
+            // coldWaterInvoiceSum
+            // 
+            this.coldWaterInvoiceSum.AutoSize = true;
+            this.coldWaterInvoiceSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.coldWaterInvoiceSum.Location = new System.Drawing.Point(171, 66);
+            this.coldWaterInvoiceSum.Name = "coldWaterInvoiceSum";
+            this.coldWaterInvoiceSum.Size = new System.Drawing.Size(18, 20);
+            this.coldWaterInvoiceSum.TabIndex = 9;
+            this.coldWaterInvoiceSum.Text = "0";
+            // 
+            // hotWaterInvoiceSum
+            // 
+            this.hotWaterInvoiceSum.AutoSize = true;
+            this.hotWaterInvoiceSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.hotWaterInvoiceSum.Location = new System.Drawing.Point(171, 37);
+            this.hotWaterInvoiceSum.Name = "hotWaterInvoiceSum";
+            this.hotWaterInvoiceSum.Size = new System.Drawing.Size(18, 20);
+            this.hotWaterInvoiceSum.TabIndex = 8;
+            this.hotWaterInvoiceSum.Text = "0";
             // 
             // groupBox2
             // 
@@ -425,6 +422,36 @@
             0,
             0});
             // 
+            // totalInvoiceSum
+            // 
+            this.totalInvoiceSum.AutoSize = true;
+            this.totalInvoiceSum.Location = new System.Drawing.Point(171, 97);
+            this.totalInvoiceSum.Name = "totalInvoiceSum";
+            this.totalInvoiceSum.Size = new System.Drawing.Size(20, 24);
+            this.totalInvoiceSum.TabIndex = 10;
+            this.totalInvoiceSum.Text = "0";
+            // 
+            // changeReceiptButton
+            // 
+            this.changeReceiptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.changeReceiptButton.Location = new System.Drawing.Point(314, 57);
+            this.changeReceiptButton.Name = "changeReceiptButton";
+            this.changeReceiptButton.Size = new System.Drawing.Size(125, 62);
+            this.changeReceiptButton.TabIndex = 11;
+            this.changeReceiptButton.Text = "Изменить показатели квитанции";
+            this.changeReceiptButton.UseVisualStyleBackColor = true;
+            this.changeReceiptButton.Click += new System.EventHandler(this.changeReceiptButton_Click);
+            // 
+            // changeTariffButton
+            // 
+            this.changeTariffButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.changeTariffButton.Location = new System.Drawing.Point(459, 59);
+            this.changeTariffButton.Name = "changeTariffButton";
+            this.changeTariffButton.Size = new System.Drawing.Size(125, 62);
+            this.changeTariffButton.TabIndex = 12;
+            this.changeTariffButton.Text = "Изменить тарифные показатели";
+            this.changeTariffButton.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -457,9 +484,6 @@
         private System.Windows.Forms.Label hotWaterConst;
         private System.Windows.Forms.Label coldWaterLabel;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox hotWaterInvoiceSum;
-        private System.Windows.Forms.TextBox coldWaterInvoiceSum;
-        private System.Windows.Forms.TextBox totalInvoiceSum;
         private System.Windows.Forms.CheckBox changeValueCheckBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -487,6 +511,11 @@
         private System.Windows.Forms.Button calculateButton;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.NumericUpDown numberOfMonth;
+        private System.Windows.Forms.Button changeTariffButton;
+        private System.Windows.Forms.Button changeReceiptButton;
+        internal System.Windows.Forms.Label hotWaterInvoiceSum;
+        internal System.Windows.Forms.Label coldWaterInvoiceSum;
+        internal System.Windows.Forms.Label totalInvoiceSum;
     }
 }
 
