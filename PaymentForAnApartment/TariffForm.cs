@@ -12,32 +12,25 @@ using System.Windows.Forms;
 
 namespace PaymentForAnApartment
 {
-    public partial class ReceiptForm : Form
+    public partial class TariffForm : Form
     {
-        private ReceiptModel data;
-
-        public ReceiptForm()
+        public TariffForm()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void tariffButton_Click(object sender, EventArgs e)
         {
             StreamReader reader = new StreamReader("Data.json");
             var json = File.ReadAllText("Data.json");  // reader.ReadToEnd()
             dynamic jsonObj = JsonConvert.DeserializeObject(json);
             reader.Close();
-            jsonObj["HotWaterInvoiceSum"] = double.Parse(hotWater.Text);
-            jsonObj["ColdWaterInvoiceSum"] = double.Parse(coldWater.Text);
-            jsonObj["TotalInvoiceSum"] = double.Parse(totalSum.Text);
-            
+            jsonObj["HotWaterRate"] = double.Parse(hotWaterTariff.Text);
+            jsonObj["ColdWaterRate"] = double.Parse(coldWaterTariff.Text);
+            jsonObj["DrainageRate"] = double.Parse(drainageTariff.Text);
+
             string output = JsonConvert.SerializeObject(jsonObj, Formatting.Indented);
             File.WriteAllText("Data.json", output);
-
-            Form1 owningForm = (Form1)this.Owner;
-            owningForm.hotWaterInvoiceSum.Text = hotWater.Text;
-            owningForm.coldWaterInvoiceSum.Text = coldWater.Text;
-            owningForm.totalInvoiceSum.Text = totalSum.Text;
 
             this.Close();
         }

@@ -85,15 +85,13 @@ namespace PaymentForAnApartment
         {
             if (changeValueCheckBox.Checked)
             {
-                //hotWaterInvoiceSum.Enabled = true;
-                //coldWaterInvoiceSu.Enabled = true;
-               // totalInvoiceSum.Enabled = true;
+                changeReceiptButton.Enabled = true;
+                changeTariffButton.Enabled = true;
             }
             else
             {
-                //hotWaterInvoiceSum.Enabled = false;
-                //coldWaterInvoiceSu.Enabled = false;
-                //totalInvoiceSum.Enabled = false;
+                changeReceiptButton.Enabled = false;
+                changeTariffButton.Enabled = false;
             }
         }
 
@@ -101,6 +99,12 @@ namespace PaymentForAnApartment
         {
             ReceiptForm receiptForm = new ReceiptForm();
             receiptForm.Show(this);
+        }
+
+        private void changeTariffButton_Click(object sender, EventArgs e)
+        {
+            TariffForm tariffForm = new TariffForm();
+            tariffForm.Show();
         }
     }
 }

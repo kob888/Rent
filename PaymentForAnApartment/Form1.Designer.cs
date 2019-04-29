@@ -33,6 +33,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.changeValueCheckBox = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.changeTariffButton = new System.Windows.Forms.Button();
+            this.changeReceiptButton = new System.Windows.Forms.Button();
+            this.totalInvoiceSum = new System.Windows.Forms.Label();
             this.coldWaterInvoiceSum = new System.Windows.Forms.Label();
             this.hotWaterInvoiceSum = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -60,9 +63,6 @@
             this.calculateButton = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.numberOfMonth = new System.Windows.Forms.NumericUpDown();
-            this.totalInvoiceSum = new System.Windows.Forms.Label();
-            this.changeReceiptButton = new System.Windows.Forms.Button();
-            this.changeTariffButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -129,6 +129,37 @@
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Квитанция";
+            // 
+            // changeTariffButton
+            // 
+            this.changeTariffButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.changeTariffButton.Location = new System.Drawing.Point(459, 59);
+            this.changeTariffButton.Name = "changeTariffButton";
+            this.changeTariffButton.Size = new System.Drawing.Size(125, 62);
+            this.changeTariffButton.TabIndex = 12;
+            this.changeTariffButton.Text = "Изменить тарифные показатели";
+            this.changeTariffButton.UseVisualStyleBackColor = true;
+            this.changeTariffButton.Click += new System.EventHandler(this.changeTariffButton_Click);
+            // 
+            // changeReceiptButton
+            // 
+            this.changeReceiptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.changeReceiptButton.Location = new System.Drawing.Point(314, 57);
+            this.changeReceiptButton.Name = "changeReceiptButton";
+            this.changeReceiptButton.Size = new System.Drawing.Size(125, 62);
+            this.changeReceiptButton.TabIndex = 11;
+            this.changeReceiptButton.Text = "Изменить показатели квитанции";
+            this.changeReceiptButton.UseVisualStyleBackColor = true;
+            this.changeReceiptButton.Click += new System.EventHandler(this.changeReceiptButton_Click);
+            // 
+            // totalInvoiceSum
+            // 
+            this.totalInvoiceSum.AutoSize = true;
+            this.totalInvoiceSum.Location = new System.Drawing.Point(171, 97);
+            this.totalInvoiceSum.Name = "totalInvoiceSum";
+            this.totalInvoiceSum.Size = new System.Drawing.Size(20, 24);
+            this.totalInvoiceSum.TabIndex = 10;
+            this.totalInvoiceSum.Text = "0";
             // 
             // coldWaterInvoiceSum
             // 
@@ -421,36 +452,6 @@
             0,
             0,
             0});
-            // 
-            // totalInvoiceSum
-            // 
-            this.totalInvoiceSum.AutoSize = true;
-            this.totalInvoiceSum.Location = new System.Drawing.Point(171, 97);
-            this.totalInvoiceSum.Name = "totalInvoiceSum";
-            this.totalInvoiceSum.Size = new System.Drawing.Size(20, 24);
-            this.totalInvoiceSum.TabIndex = 10;
-            this.totalInvoiceSum.Text = "0";
-            // 
-            // changeReceiptButton
-            // 
-            this.changeReceiptButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.changeReceiptButton.Location = new System.Drawing.Point(314, 57);
-            this.changeReceiptButton.Name = "changeReceiptButton";
-            this.changeReceiptButton.Size = new System.Drawing.Size(125, 62);
-            this.changeReceiptButton.TabIndex = 11;
-            this.changeReceiptButton.Text = "Изменить показатели квитанции";
-            this.changeReceiptButton.UseVisualStyleBackColor = true;
-            this.changeReceiptButton.Click += new System.EventHandler(this.changeReceiptButton_Click);
-            // 
-            // changeTariffButton
-            // 
-            this.changeTariffButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.changeTariffButton.Location = new System.Drawing.Point(459, 59);
-            this.changeTariffButton.Name = "changeTariffButton";
-            this.changeTariffButton.Size = new System.Drawing.Size(125, 62);
-            this.changeTariffButton.TabIndex = 12;
-            this.changeTariffButton.Text = "Изменить тарифные показатели";
-            this.changeTariffButton.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 

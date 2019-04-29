@@ -10,8 +10,8 @@ namespace PaymentForAnApartment
     {
         public double InvoiceSum { get; set; }                 // Сумма по квитанции
         public double Rate { get;  set; }                       // Тариф на воду
-        public int IndicatorValue { get;  set; }        // Показания счетчика воды
-        public int LastIndicatorValue { get;  set; }    // Показания счетчика воды за прошлый месяц
+        public int IndicatorValue { get;  set; }            // Показания счетчика воды
+        public int LastIndicatorValue { get;  set; }       // Показания счетчика воды за прошлый месяц
 
 
         public Water(int lastIndicatorValue, int indicatoValue, double rate)

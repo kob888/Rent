@@ -65,6 +65,12 @@
       <DependentUpon>ReceiptForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ReceiptModel.cs" />
+    <Compile Include="TariffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TariffForm.Designer.cs">
+      <DependentUpon>TariffForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Water.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -80,6 +86,9 @@
     </Compile>
     <EmbeddedResource Include="ReceiptForm.resx">
       <DependentUpon>ReceiptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TariffForm.resx">
+      <DependentUpon>TariffForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="bin\Debug\Data.json" />
     <None Include="packages.config" />
